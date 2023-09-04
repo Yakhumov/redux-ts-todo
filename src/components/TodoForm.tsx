@@ -4,11 +4,12 @@ import React from 'react'
 interface InputFiltProps {
     title: string,
     handleInput:   (str: string) => void
-    handleSubmit: ()=> void
+    handleSubmit: ()=> void 
     
 }
 
-const InputFilt: React.FC <InputFiltProps> = ({title, handleInput, handleSubmit}) => {           
+const InputFilt: React.FC <InputFiltProps> = (props) => {  
+  const {title, handleInput,handleSubmit} = props          
   return (
     <label>
     <input

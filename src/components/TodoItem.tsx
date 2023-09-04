@@ -8,8 +8,9 @@ interface TodoItemProps{
     completed: boolean
 }
 
-const TodoItem: React.FC <TodoItemProps> = ({id, title, completed}) => {    
-
+const TodoItem: React.FC <TodoItemProps> = (props) => {    
+ const {id, title,completed} = props
+ 
  const dispatch = useAppDispatch()  
 
   return (

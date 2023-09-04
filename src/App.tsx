@@ -9,13 +9,12 @@ import { useAppSelector } from "./hook";
 
 function App() {
   const [title, setTitle] = useState('');   
-  const [log, setLog] = useState('')
   const dispatch = useAppDispatch();
-  const todos = useAppSelector(state => state.todos.list)    
+  const todos = useAppSelector(state => state.todos.list)              
 
   const addTask = () => {
     if (title) {
-      dispatch(addTodo(title));
+      dispatch(addTodo(title));  
       setTitle('');
     }
   };

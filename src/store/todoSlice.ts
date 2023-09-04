@@ -21,12 +21,12 @@ const todoSlice = createSlice({
     addTodo: (state, action: PayloadAction<string>) => {
       state.list.push({
         id: new Date().toISOString(),
-        title: action.payload,
+        title: action.payload, 
         completed: false,
       });
     },
     removeTodo: (state, action: PayloadAction<string>) => {
-      state.list = state.list.filter((todo) => todo.id !== action.payload);      
+      state.list = state.list.filter((todo) => todo.id !== action.payload);       
     },
     handleChange: (state, action: PayloadAction<string>) => {
       state.list = state.list.map((todo) => {
