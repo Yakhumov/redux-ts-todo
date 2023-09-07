@@ -6,11 +6,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
   completed: boolean; 
 };
 
-type TodoState = {
+ export type TodoState = {
   list: Todo[];               
 };
 
-const initialState: TodoState = {
+  const initialState: TodoState = {
   list: [],                                        
 };
 
